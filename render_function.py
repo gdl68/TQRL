@@ -92,7 +92,7 @@ def render_all(con, panel, entities, player, game_map, fov_map, fov_recompute, m
         else:
             inventory_title = 'Press the key next to an item to DROP it, or Esc to cancel.\n'
 
-        inventory_menu(con, inventory_title, player.inventory, 50,screen_width, screen_height)
+        inventory_menu(con, inventory_title, player.inventory, 50, screen_width, screen_height)
 
 
 def clear_all(con, entities):

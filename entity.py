@@ -53,7 +53,12 @@ class Entity:
                                                                                                    self.y + dy)):
             self.move(dx, dy)
 
+    def distance(self, x, y):
+        return sqrt((x - self.x) ** 2 + (y - self.y) ** 2)
+
+
     # ASTAR BLYAT'
+
     def move_astar(self, target, entities, game_map):
         # Create a FOV map that has the dimensions of the map
         fov = libtcod.map_new(game_map.width, game_map.height)
@@ -108,3 +113,4 @@ def get_blocking_entities_at_location(entities, destination_x, destination_y):
         if entity.blocks and entity.x == destination_x and entity.y == destination_y:
             return entity
     return None
+
